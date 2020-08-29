@@ -253,3 +253,22 @@ public interface IAudioPlayer
     void Play(int[] data);
 }
 ```
+
+### 五、List的使用
+```csharp
+List<int> list = new List<int>();
+list.Add(12);
+list.Add(3);
+list.Add(8);
+list.Add(19);
+Console.WriteLine(list[2]); // 可以直接用索引来访问
+list[3] = 666; // 直接用索引来更新
+for (int i = 0; i < list.Count(); i++) // fori
+{
+    Console.WriteLine(list[i] + " ");
+}
+foreach (int item in list) // foreach
+{
+    Console.WriteLine(item + " ");
+}
+```
