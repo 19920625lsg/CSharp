@@ -208,7 +208,11 @@ class MyExample : Example
 }
 ```
 
-> 注意：想要在在子类中调用父类的方法，java中用`super.xxx()`，C#中用`base.xxx()`，举例如下：
+> 注意：想要在在子类中调用父类的方法，java中用`super.xxx()`，C#中用`base.xxx()`，上面的例子中在MyExample中想要调用Example中的Translate()应该用`base.Translate()`
+
+
+> 想要在子类中使用父类的构造函数，情况特殊点，和Java不同，和C++类似。举例如下：
+
 
 定义父类 Point。示例代码如下。
 
