@@ -239,3 +239,17 @@ public class Point3D : Point
 }
 ```
 其中，在子类的构造方法之后，显式地调用了 base(x, y) ，表示对父类构造方法的显式调用。
+
+## 四、接口interface
+使用 interface 关键字可以定义一个接口。
+
+例如，定义一个接口 IAudipPlayer，表示音频播放功能。注意， 接口的名字应
+
+该以大写的 I 字母开头。
+```csharp
+// 定义一个接口，接口名要以 I 开头
+public interface IAudioPlayer
+{
+    void Play(int[] data);
+}
+```
