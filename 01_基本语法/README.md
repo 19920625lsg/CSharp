@@ -169,6 +169,7 @@ class Student
 ```
 
 ### 4.最简化形式
+> 注意此时的属性要直接大写了
 ```csharp
 class Student
 {
