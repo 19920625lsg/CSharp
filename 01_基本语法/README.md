@@ -207,3 +207,31 @@ class MyExample : Example
     }
 }
 ```
+
+> 注意：想要在在子类中调用父类的方法，java中用`super.xxx()`，C#中用`base.xxx()`，举例如下：
+
+定义父类 Point。示例代码如下。
+
+```csharp
+public class Point
+{
+    public int x, y;
+    public Point(int x, int y)
+    {
+        this.x = x;
+        this.y = y;
+    }
+}
+```
+定义子类 Point3D,示例代码如下。
+```csharp
+public class Point3D : Point
+{
+    public int z;
+    public Point3D(int x, int y, int z) : base(x, y)
+    {
+        this.z = z;
+    }
+}
+```
+其中，在子类的构造方法之后，显式地调用了 base(x, y) ，表示对父类构造方法的显式调用。
