@@ -170,9 +170,40 @@ class Student
 
 ### 4.最简化形式
 > 注意此时的属性要直接大写了
+
 ```csharp
 class Student
 {
     public string Name { get; set; }
+}
+```
+
+## 三、重写override
+如果子类想对父类的方法实现进行修改，可以重写该方法。在重写时，要求
++ 父类将方法声明为 `virtual`（虚拟方法，表示可能会被重写的）。
++ 子类将方法声明为 `override`（表示重写）。
+
+例子如下：
+
+父类：
+```csharp
+class Example
+{
+    // 。。。略
+    public virtual void Translate()
+    {
+        Console.WriteLine("number:" + number);
+    }
+}
+```
+
+子类如下：
+```csharp
+class MyExample : Example
+{
+    public override void Translate()
+    {
+        Console.WriteLine("号码为:" + number);
+    }
 }
 ```
