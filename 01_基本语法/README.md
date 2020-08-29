@@ -8,7 +8,8 @@
 
 举例如下：
 
-### Form1.cs
+### 业务逻辑文件：Form1.cs
+> ` public partial class Form1 : Form`里面实现了业务逻辑
 ```csharp
 using System;
 using System.Collections.Generic;
