@@ -1,7 +1,7 @@
 # C#系列教程 - 基础语法篇
 
 
-## 重要：partial class
+## 一、partial class
 在WinForm用地很多，每个界面基本都有`业务代码文件`如`Form1.cs`和`界面配置管理文件`如`Form1.Designer.cs`中，并且二者都利用`partial class`实现了同一个类如`Form1`
 
 前者放用户真正关系的业务代码，后者放自动生成的界面代码、资源配置代码、系统变量等不需要用户关系的东西，很好地实现了业务和UI的分离
@@ -112,5 +112,66 @@ namespace WindowsFormStudy
 
         private System.Windows.Forms.Button button1;
     }
+}
+```
+
+## 二、getter和setter
+
+### 1.类似Java的写法
+```csharp
+class Student
+{
+    private string name;
+    // Getter
+    public string GetName()
+    {
+        return this.name;
+    }
+    // Setter
+    public void SetName(string name)
+    {
+        this.name = name;
+    }
+}
+```
+
+### 2.初步简化
+```csharp
+class Student
+{
+    private string name;
+    public String Name
+    {
+        get
+        {
+            return this.name;
+        }
+        set
+        {
+            this.name = value;
+        }
+    }
+}
+```
+
+### 3.使用lambda表达式来简化
+```csharp
+class Student
+{
+    private string name;
+
+    public string Name
+    {
+        get => name;
+        set => name = value;
+    }
+}
+```
+
+### 4.最简化形式
+```csharp
+class Student
+{
+    public string Name { get; set; }
 }
 ```
